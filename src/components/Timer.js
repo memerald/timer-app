@@ -12,7 +12,7 @@ const Timer = ({
     handleReset,
 }) => {
     return (
-        <div>
+        <div className="timer-wrapper">
             {!breakFlag && (
                 <div id="session-container">
                     <h3 id="timer-label">Session</h3>

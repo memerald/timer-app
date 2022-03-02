@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import BreakLength from "./components/BreakLength";
-import Reset from "./components/Reset";
 import SessionLength from "./components/SessionLength";
 import Timer from "./components/Timer";
 
@@ -94,24 +93,22 @@ function App() {
                 breakLength={breakLength}
                 setBreakLength={setBreakLength}
             />
-            <div className="session-wrapper">
-                <SessionLength
-                    sessionLength={sessionLength}
-                    setSessionLength={setSessionLength}
-                    flag={flag}
-                />
+            <SessionLength
+                sessionLength={sessionLength}
+                setSessionLength={setSessionLength}
+                flag={flag}
+            />
 
-                <Timer
-                    breakFlag={breakFlag}
-                    getBreakMin={getBreakMin}
-                    getBreakSec={getBreakSec}
-                    getSessMin={getSessMin}
-                    getSessSec={getSessSec}
-                    setFlag={setFlag}
-                    flag={flag}
-                    handleReset={handleReset}
-                />
-            </div>
+            <Timer
+                breakFlag={breakFlag}
+                getBreakMin={getBreakMin}
+                getBreakSec={getBreakSec}
+                getSessMin={getSessMin}
+                getSessSec={getSessSec}
+                setFlag={setFlag}
+                flag={flag}
+                handleReset={handleReset}
+            />
         </div>
     );
 }

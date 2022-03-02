@@ -16,7 +16,7 @@ const BreakLength = ({ breakLength, setBreakLength }) => {
                     >
                         <i className="fas fa-arrow-alt-circle-down"></i>
                     </span>
-                    <span id="break-length">{breakLength}</span>
+                    <p id="break-length">{breakLength}</p>
                     <span
                         id="break-increment"
                         onClick={() =>

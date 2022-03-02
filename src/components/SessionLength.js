@@ -15,7 +15,7 @@ const SessionLength = ({ sessionLength, setSessionLength, flag }) => {
                 >
                     <i className="fas fa-arrow-alt-circle-down"></i>
                 </span>
-                <span id="session-length">{sessionLength}</span>
+                <p id="session-length">{sessionLength}</p>
                 <span
                     id="session-increment"
                     disabled={!flag ? false : true}
