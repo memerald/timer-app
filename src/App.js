@@ -4,6 +4,8 @@ import Reset from "./components/Reset";
 import SessionLength from "./components/SessionLength";
 import Timer from "./components/Timer";
 
+import "./App.css";
+
 function App() {
     const [breakLength, setBreakLength] = useState(5);
     const [sessionLength, setSessionLength] = useState(25);
@@ -107,8 +109,8 @@ function App() {
                     getSessSec={getSessSec}
                     setFlag={setFlag}
                     flag={flag}
+                    handleReset={handleReset}
                 />
-                <Reset setFlag={setFlag} handleReset={handleReset} />
             </div>
         </div>
     );

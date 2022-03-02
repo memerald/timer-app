@@ -1,0 +1,24 @@
+body {
+    background-color: #5463ff;
+    color: #ececec;
+    font-family: sans-serif;
+    text-shadow: 1px 1px #000000;
+    overflow-y: hidden;
+    height: 100vh;
+    font-size: x-large;
+}
+
+.clock-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+span {
+    cursor: pointer;
+    margin: 10px;
+}
