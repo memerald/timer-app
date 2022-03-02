@@ -3,14 +3,14 @@ import React from "react";
 const Reset = ({ setFlag, handleReset }) => {
     return (
         <div>
-            <button
+            <span
                 id="reset"
                 onChange={() => setFlag(false)}
                 onClick={handleReset}
                 // handles reset when clicked on reset button
             >
-                Reset
-            </button>
+                <i className="fas fa-redo-alt"></i>
+            </span>
         </div>
     );
 };

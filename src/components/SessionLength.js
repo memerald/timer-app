@@ -5,7 +5,7 @@ const SessionLength = ({ sessionLength, setSessionLength, flag }) => {
         <div>
             <h3 id="session-label">Session Length</h3>
             <div className="session-container">
-                <button
+                <span
                     id="session-decrement"
                     disabled={!flag ? false : true}
                     onClick={() =>
@@ -13,10 +13,10 @@ const SessionLength = ({ sessionLength, setSessionLength, flag }) => {
                         sessionLength > 1 && setSessionLength(sessionLength - 1)
                     }
                 >
-                    -
-                </button>
+                    <i className="fas fa-arrow-alt-circle-down"></i>
+                </span>
                 <span id="session-length">{sessionLength}</span>
-                <button
+                <span
                     id="session-increment"
                     disabled={!flag ? false : true}
                     onClick={() =>
@@ -25,8 +25,8 @@ const SessionLength = ({ sessionLength, setSessionLength, flag }) => {
                         setSessionLength(sessionLength + 1)
                     }
                 >
-                    +
-                </button>
+                    <i className="fas fa-arrow-alt-circle-up"></i>
+                </span>
             </div>
         </div>
     );
