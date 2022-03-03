@@ -46,3 +46,24 @@ p {
     border: 4px solid #fdeff4;
     padding: 15px 125px;
 }
+
+i {
+    font-size: 45px;
+}
+
+.session-container,
+.break-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.timer-wrapper {
+    border: 4px solid #fdeff4;
+    padding: 15px 125px;
+}
