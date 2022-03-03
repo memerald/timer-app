@@ -31,9 +31,11 @@ function App() {
         setFlag(false);
         setResetFlag(true);
         setBreakFlag(false);
-        setGetSessSec(0);
         setBreakLength(5);
         setSessionLength(25);
+        setGetSessMin(25);
+        setGetSessSec(0);
+        setSessionTimer(sessionLength * 60);
         // resets all states
     };
 
@@ -89,26 +91,31 @@ function App() {
 
     return (
         <div className="clock-wrapper">
-            <BreakLength
-                breakLength={breakLength}
-                setBreakLength={setBreakLength}
-            />
-            <SessionLength
-                sessionLength={sessionLength}
-                setSessionLength={setSessionLength}
-                flag={flag}
-            />
-
-            <Timer
-                breakFlag={breakFlag}
-                getBreakMin={getBreakMin}
-                getBreakSec={getBreakSec}
-                getSessMin={getSessMin}
-                getSessSec={getSessSec}
-                setFlag={setFlag}
-                flag={flag}
-                handleReset={handleReset}
-            />
+            <div className="set-timer">
+                <h1 className="first-heading">25 + 5 </h1>
+                <BreakLength
+                    breakLength={breakLength}
+                    setBreakLength={setBreakLength}
+                />
+                <SessionLength
+                    sessionLength={sessionLength}
+                    setSessionLength={setSessionLength}
+                    flag={flag}
+                />
+            </div>
+            <div className="timer-container">
+                <h1 className="second-heading">Clock</h1>
+                <Timer
+                    breakFlag={breakFlag}
+                    getBreakMin={getBreakMin}
+                    getBreakSec={getBreakSec}
+                    getSessMin={getSessMin}
+                    getSessSec={getSessSec}
+                    setFlag={setFlag}
+                    flag={flag}
+                    handleReset={handleReset}
+                />
+            </div>
         </div>
     );
 }
