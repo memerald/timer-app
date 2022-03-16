@@ -160,87 +160,89 @@ ul {
 .navbar {
     background-color: #151d3b;
     padding: 30px;
+    height: 1%;
+    line-height: 0.5;
 }
 
-.register,
-.login {
+.login,
+.register {
     background-color: #1d2a53;
     height: 100vh;
-    text-align: center;
 }
 
-.register-container,
-.login-wrapper {
+.login-wrapper,
+.register-wrapper {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 75%;
 }
 
-.register-wrapper,
-.login-wrapper {
-    background-color: #151d3b;
+.login-container,
+.register-container {
+    padding: 75px;
+    background-color: #101422;
     border-radius: 10px;
-    padding: 50px 150px;
+    text-align: center;
 }
 
-.register-wrapper h1,
-.login-wrapper h1 {
-    margin: 0;
-    padding-bottom: 10px;
+.login-container h1,
+.register-container h1 {
+    margin-top: 0;
 }
 
-.register-wrapper p,
-.login-wrapper p {
-    font-size: 14px;
-}
-
-.register-wrapper input,
-.login-wrapper input {
-    width: 300px;
-    padding: 15px 25px;
-    margin-top: 40px;
-    font-size: 20px;
-    border-radius: 5px;
-}
-
-.register-wrapper [type="text"],
-.register-wrapper [type="password"],
-.login-wrapper [type="password"],
-.login-wrapper [type="text"] {
-    background-color: #101422;
+.login-container [type="text"],
+.login-container [type="password"] {
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding: 5px 10px;
     border: none;
-    color: #ececec;
-}
-
-.register-wrapper [type="submit"],
-.login-wrapper [type="submit"] {
-    width: 350px;
-    cursor: pointer;
-    color: #ececec;
-    background: transparent;
-    border: 1px solid #ffffff;
-}
-
-.register-wrapper [type="submit"]:hover,
-.login-wrapper [type="submit"]:hover {
-    background-color: #101422;
-    border: none;
-}
-
-.register-wrapper ::placeholder,
-.login-wrapper ::placeholder {
-    opacity: 1;
-}
-
-.login-wrapper {
-    width: fit-content;
-    margin: 150px auto;
-}
-
-.login-container {
     background-color: #1d2a53;
+    color: #ececec;
+}
+
+.register-container [type="text"],
+.register-container [type="password"] {
+    font-size: 18px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #1d2a53;
+    color: #ececec;
+}
+
+.login-container [type="submit"],
+.register-container [type="submit"] {
+    font-size: 18px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #151d3b;
+    border: none;
+    color: #ececec;
+    padding: 10px;
+}
+
+.login-container [type="submit"]:hover,
+.register-container [type="submit"]:hover {
+    box-shadow: 0px 0px 10px 2px #3665d3;
+}
+
+.register-container p {
+    padding: 0;
+    width: 200px;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+::placeholder {
+    opacity: 0.9;
+}
+
+.pass-text {
+    margin-top: 50px;
+    padding: 0;
+    text-align: left;
+    opacity: 0.7;
 }
 
 .user-details {
@@ -299,6 +301,7 @@ ul {
         background-color: #ffffff;
         color: #151d3b;
     }
+
     .user-details button:hover {
         background-color: #ececec;
     }

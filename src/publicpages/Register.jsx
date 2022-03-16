@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Navbar from "./Navbar";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,7 +7,6 @@ import { registerUser } from "../redux/actions/userAction";
 
 const Register = () => {
     const dispatch = useDispatch();
-    const { authReducer } = useSelector((state) => state);
     const navigate = useNavigate();
     const {
         register,
@@ -15,20 +14,17 @@ const Register = () => {
         formState: { errors },
     } = useForm();
 
-    useEffect(() => {
-        if (authReducer.token) navigate("/");
-    }, []);
-
     const handleRegister = (data) => {
         dispatch(registerUser(data));
+        navigate("/");
     };
 
     return (
         <div className="register">
             <Navbar />
-            <div className="register-container">
+            <div className="register-wrapper">
                 <form onSubmit={handleSubmit(handleRegister)}>
-                    <div className="register-wrapper">
+                    <div className="register-container">
                         <h1>Register</h1>
                         <input
                             type="text"
@@ -53,17 +49,20 @@ const Register = () => {
                                 required: "Please enter your password",
                                 pattern: {
                                     value: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,14}$/,
-                                    message:
-                                        "Your password should contain at least a smallcase letter, an uppercase letter, a number and a special character and should be between 8 - 14 characters",
+                                    message: "Invalid password",
                                 },
                             })}
                             placeholder="Password"
                             autoComplete="off"
                         />
                         <p>{errors.password?.message}</p>
-                        <p>{errors.confirmPassword?.message}</p>
 
                         <input type="submit" value="Register" />
+                        <p className="pass-text">
+                            Your password should contain an uppercase letter,
+                            lowercase letter, a number, a special character and
+                            should be between 8-14 characters
+                        </p>
                     </div>
                 </form>
             </div>

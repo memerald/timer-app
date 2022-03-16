@@ -22,24 +22,16 @@ export const login = (data) => async (dispatch) => {
     }
 };
 
-export const registerUser = (data) => async (dispatch) => {
+export const registerUser = (data) => async () => {
     const check = valid(data);
 
     if (check.errLength > 0) {
         alert("Invalid inputs");
     } else {
         try {
-            const res = await postDataAPI("register", data);
-            dispatch({
-                type: AUTHTYPES.AUTH,
-                payload: {
-                    token: res.data.access_token,
-                    user: res.data.user,
-                },
-            });
-            localStorage.setItem("firstLogin", true);
+            await postDataAPI("register", data);
         } catch (error) {
-            alert(error.message);
+            alert(error.response.data.msg);
         }
     }
 };

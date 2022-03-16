@@ -40,11 +40,6 @@ const Timer = ({
                         getBreakSec < 10 ? "0" + getBreakSec : getBreakSec
                     }`}</h1>
                     <span id="start_stop" onClick={() => setFlag(!flag)}>
-                        {flag ? (
-                            <i className="fas fa-pause"></i>
-                        ) : (
-                            <i className="fas fa-play"></i>
-                        )}
                         {/*sets flag true or false to stop or start timer*/}
                     </span>
                 </div>

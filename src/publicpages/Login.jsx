@@ -30,25 +30,31 @@ const Login = () => {
     return (
         <div className="login">
             <Navbar />
-            <div className="login-container">
+            <div className="login-wrapper">
                 <form onSubmit={handleSubmit}>
-                    <div className="login-wrapper">
+                    <div className="login-container">
                         <h1>Login</h1>
-                        <input
-                            type="text"
-                            placeholder="Enter your username"
-                            value={userName}
-                            onChange={handleInputChange}
-                            name="userName"
-                        />
-                        <input
-                            type="password"
-                            placeholder="Enter your password"
-                            value={password}
-                            onChange={handleInputChange}
-                            name="password"
-                        />
-                        <input type="submit" value="Login" />
+                        <div>
+                            <input
+                                type="text"
+                                placeholder="Enter your username"
+                                value={userName}
+                                onChange={handleInputChange}
+                                name="userName"
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="password"
+                                placeholder="Enter your password"
+                                value={password}
+                                onChange={handleInputChange}
+                                name="password"
+                            />
+                        </div>
+                        <div>
+                            <input type="submit" value="Login" />
+                        </div>
                     </div>
                 </form>
             </div>
