@@ -181,7 +181,7 @@ ul {
 
 .login-container,
 .register-container {
-    padding: 75px;
+    padding: 75px 150px;
     background-color: #101422;
     border-radius: 10px;
     text-align: center;
