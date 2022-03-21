@@ -4,6 +4,14 @@
     "description": "",
     "main": "server.js",
     "scripts": {
+        "start": "server.js",
+        "server": "nodemon server.js",
+        "client": "cd .. && npm run start",
+        "server-install": "npm i",
+        "client-install": "cd .. && npm i",
+        "install-all": "concurrently \"npm run server-install\" \"npm run client-install",
+        "dev": "concurrently \"npm run server\" \"npm run client",
+        "heroku-postbuild": "cd .. && npm i && npm run build",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
@@ -11,6 +19,7 @@
     "license": "ISC",
     "dependencies": {
         "bcrypt": "^5.0.1",
+        "concurrently": "^7.0.0",
         "dotenv": "^16.0.0",
         "jsonwebtoken": "^8.5.1",
         "nodemon": "^2.0.15"

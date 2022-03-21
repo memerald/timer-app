@@ -13,11 +13,13 @@ app.use(cors());
 
 app.use("/api", require("./routes/userRoute"));
 
-app.use(express.static("build"));
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("build"));
 
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "../build", "index.html"));
-});
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "../build", "index.html"));
+    });
+}
 
 const url = process.env.MONGO_URL;
 
