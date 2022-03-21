@@ -4,11 +4,20 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
+const path = require("path");
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(cors());
 
 app.use("/api", require("./routes/userRoute"));
+
+app.use(express.static("build"));
+
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
 
 const url = process.env.MONGO_URL;
 

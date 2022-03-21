@@ -8,6 +8,7 @@ export const AUTHTYPES = {
 export const login = (data) => async (dispatch) => {
     try {
         const res = await postDataAPI("login", data);
+        console.log(res);
         dispatch({
             type: AUTHTYPES.AUTH,
             payload: {

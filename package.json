@@ -1,6 +1,7 @@
 {
     "name": "markdown-parser",
     "version": "0.1.0",
+    "proxy": "http://localhost:5000",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.2",
@@ -8,6 +9,7 @@
         "@testing-library/user-event": "^13.5.0",
         "axios": "^0.26.1",
         "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
         "express": "^4.17.3",
         "mongoose": "^6.2.6",
         "react": "^17.0.2",
@@ -22,8 +24,11 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "start:front": "react-scripts start",
+        "start": "npm run build && npm server:prod",
         "build": "react-scripts build",
+        "server:dev": "nodemon ../backend/server.js",
+        "server:prod": "node ../backend/server.js",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
