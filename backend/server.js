@@ -21,7 +21,9 @@ if (process.env.NODE_ENV === "production") {
     });
 }
 
-// console.log(path.join(__dirname, "../build"));
+// const __dirname = path.resolve();
+
+console.log(__dirname);
 
 const url = process.env.MONGO_URL;
 

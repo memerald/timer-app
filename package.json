@@ -1,16 +1,13 @@
 {
     "name": "markdown-parser",
     "version": "0.1.0",
+    "proxy": "http://localhost:5000",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^5.16.2",
         "@testing-library/react": "^12.1.3",
         "@testing-library/user-event": "^13.5.0",
         "axios": "^0.26.1",
-        "cookie-parser": "^1.4.6",
-        "cors": "^2.8.5",
-        "express": "^4.17.3",
-        "mongoose": "^6.2.6",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
         "react-hook-form": "^7.28.0",
