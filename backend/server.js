@@ -23,10 +23,18 @@ app.get("*", (req, res) => {
 
 const url = process.env.MONGO_URL;
 
-mongoose.connect(url, (err) => {
-    if (err) throw err;
-    console.log("Connected to MongoDB");
-});
+mongoose
+    .connect(url, {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useUnifiedTopology: true,
+    })
+    .then((res) => {
+        console.log("DB Connected!");
+    })
+    .catch((err) => {
+        console.log(Error, err.message);
+    });
 
 app.listen(process.env.PORT || 5001, () => {
     console.log("Server is running on port 5000");
