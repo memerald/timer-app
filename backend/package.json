@@ -12,6 +12,9 @@
         "start": "concurrently --kill-others-on-fail \"npm run server\" \" cd .. \" \"npm run start\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "engines": {
+        "node": "16.x"
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
