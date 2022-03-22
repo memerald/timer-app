@@ -21,7 +21,7 @@ const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch(login(userData));
-        console.log();
+        // console.log(userData);
     };
 
     useEffect(() => {
