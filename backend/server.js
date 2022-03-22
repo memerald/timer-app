@@ -20,6 +20,7 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "../build", "index.html"));
     });
 }
+console.log(__dirname);
 
 const url = process.env.MONGO_URL;
 
@@ -28,6 +29,6 @@ mongoose.connect(url, (err) => {
     console.log("Connected to MongoDB");
 });
 
-app.listen(process.env.PORT || 5000, () => {
+app.listen(process.env.PORT || 5001, () => {
     console.log("Server is running on port 5000");
 });
